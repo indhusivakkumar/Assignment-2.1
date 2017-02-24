@@ -1,0 +1,177 @@
+1) Write a JAVA code with the class named ‘acad’ and a method ‘main’. Hard code the program
+with two integers and print the sum of those two.
+
+import java.util.*;
+class acad
+{
+public static void main(String[] args)
+{
+int numb1=5;
+int numb2=7;
+System.out.println(numb1+numb2);
+}
+}
+
+
+2) Rewrite the above code, where, inputs are provided by the user at runtime and the output is printed
+
+import java.util.*;
+class acad
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+int nm=sc.nextInt();
+int mn=sc.nextInt();
+int k=nm+mn;
+System.out.println(k);
+}
+}
+
+3) Write a program with a method name sum() that accepts two parameters from the user and
+print the sum two numbers. Output of the format should be as :
+
+import java.util.*;
+class acad
+{
+ public static void sum()
+{
+Scanner sc=new Scanner(System.in);
+int i=sc.nextInt();
+int k=sc.nextInt();
+System.out.println("First number is: "+i);
+System.out.println("Second number is: "+k);
+int l=i+k;
+System.out.println("Sum is: "+l);
+
+}
+public static void main(String[] args)
+{
+ 
+sum();
+}
+}
+
+4) Write a program to accepts two numbers from stdin and find all the odd as well as even
+numbers present in between them.
+
+import java.util.*;
+class Odev
+{
+
+public static void main(String[] args)
+{
+int[] oarr=new int[100];
+int[] earr=new int[100];
+int l=0,h=0;
+Scanner sc=new Scanner(System.in);
+int i=sc.nextInt();
+int k=sc.nextInt();
+for(int j=i;j<=k;j++)
+{
+if(j%2==0)
+{
+earr[l]=j;
+l++;
+}
+else
+{
+oarr[h]=j;
+h++;
+}
+}
+System.out.println("Odd numbers are:");
+for(int p=0;p<oarr.length;p++)
+{
+    if(oarr[p]!=0)
+System.out.println(oarr[p]);
+}
+System.out.println("Even numbers are:");
+for(int p=0;p<earr.length;p++)
+{
+     if(earr[p]!=0)
+System.out.println(earr[p]);
+}
+}
+}
+
+5. Joe is scared to go to school. When her dad asked the reason, Joe said she is unable to complete
+the task given by her teacher. The task was to find the “first 10 multiples” of the number entered from stdin
+
+import java.util.*;
+class Main
+{
+
+public static void main(String[] args)
+{
+
+Scanner sc=new Scanner(System.in);
+int i=sc.nextInt();
+for(int j=1;j<=10;j++)
+{
+    System.out.println(i+"*"+j+"="+(i*j));
+}
+}
+}
+
+6.Write a program consisting method sum() and demonstrate the concept of method overloading using this method.
+
+import java.util.*;
+class Sum{  
+static int sum(int a,int b){return a+b;}  
+static int sum(int a,int b,int c){return a+b+c;}  
+}  
+class Overloading{  
+public static void main(String[] args){  
+System.out.println(Sum.sum(2,3));  
+System.out.println(Sum.sum(4,8,5));  
+}}  
+
+
+7. Can you overload a method with the same return type? Explain your answer with proper logic.
+
+Yes, we can overload a method with same return type. Methods can have varying number of
+arguments but the method name should be the same. Return type can be either same or different.
+Example:
+import java.util.*;
+class Sum{  
+static int sum(int l,int m)
+{ 
+return l+m;
+}  
+static int sum(int l,int m,int o)
+{
+return l+m+o;
+}  
+}  
+class OverloadingSample{  
+public static void main(String[] args){  
+System.out.println(Sum.sum(5,17));  
+System.out.println(Sum.sum(4,9,67));  
+}
+}  
+
+8.Write a program in java using Arrays that sorts the element in descending order
+
+import java.util.*;
+class Main
+{
+
+public static void main(String[] args)
+{
+
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int arr[]=new int[50];
+for(int i=0;i<n;i++)
+{
+arr[i]=sc.nextInt();
+}
+Arrays.sort(arr);
+for(int j=arr.length-1;j>=0;j-- )
+{
+    if(arr[j]!=0)
+    System.out.println(arr[j]);
+}
+}
+}
